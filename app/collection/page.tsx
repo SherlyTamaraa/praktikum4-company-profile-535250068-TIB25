@@ -1,4 +1,3 @@
-
 import { perfumes } from "../../data/perfumes";
 import PerfumeCard from "../../components/PerfumeCard";
 
