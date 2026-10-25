@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,600;1,9..40,600&display=swap');
+
+:root {
+  --cream: #f8f5ef;
+  --white: #fffdf9;
+  --pink: #e8b9b8;
+  --dark-pink: #cb8589;
+  --brown: #39312e;
+  --muted: #817873;
+  --border: #e5ded5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--cream);
+  color: var(--brown);
+  font-family: 'DM Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+.navbar-logo {
+  font-weight: 600;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.navbar,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 6%;
+  background: var(--white);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-logo {
+  font-size: 30px;
+}
+
+.navbar-logo span {
+  color: var(--dark-pink);
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.navbar-link {
+  padding: 10px 12px;
+  font-size: 13px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar-link:hover {
+  color: var(--dark-pink);
+}
+
+.navbar-link.active {
+  background: var(--pink);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.home-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 32px 24px 60px;
+}
+
+.hero,
+.detail-layout,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.hero {
+  gap: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.hero-text,
+.about-simple,
+.contact-note {
+  padding: 40px 30px;
+  background: #f1dfdc;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.hero h1,
+.collection-header h1,
+.journal-heading h1,
+.contact-heading h1,
+.detail-info h1,
+.about-simple h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+}
+
+.hero-description,
+.about-description,
+.detail-description {
+  max-width: 420px;
+  margin: 18px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 16px;
+  background: var(--dark-pink);
+  color: white;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: var(--brown);
+}
+
+.hero-image,
+.product-image,
+.detail-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  min-height: 350px;
+  background: #e7d7c5;
+}
+
+.hero-image img {
+  object-fit: cover;
+}
+
+.favorites {
+  margin-top: 36px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 28px;
+}
+
+.text-link,
+.journal-read {
+  font-size: 12px;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.text-link:hover,
+.journal-read:hover {
+  color: var(--dark-pink);
+}
+
+.favorite-grid,
+.journal-grid,
+.about-values-simple {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.favorite-card {
+  display: block;
+  min-width: 0;
+}
+
+.product-image {
+  height: 210px;
+  margin-bottom: 12px;
+  background: #e7d7c5;
+}
+
+.product-image img {
+  object-fit: cover;
+}
+
+.peach {
+  background: #f0d8d1;
+}
+
+.sage {
+  background: #dce2d5;
+}
+
+.yellow {
+  background: #eee2c7;
+}
+
+.favorite-card h3 {
+  margin-bottom: 5px;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.favorite-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.favorite-card:hover h3 {
+  color: var(--dark-pink);
+}
+
+.collection-header,
+.journal-heading,
+.contact-heading {
+  padding: 32px 0;
+}
+
+.collection-header h1,
+.journal-heading h1,
+.contact-heading h1 {
+  margin-bottom: 12px;
+}
+
+.collection-header > p:last-child,
+.journal-heading > p:last-child,
+.contact-heading > p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 16px;
+}
+
+/* Detail parfum */
+
+.detail-layout {
+  margin-top: 24px;
+  align-items: center;
+}
+
+.detail-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.detail-info {
+  padding: 24px 0;
+}
+
+.detail-notes {
+  margin-top: 12px;
+  color: var(--dark-pink);
+  font-size: 14px;
+}
+
+.notes-box,
+.value-simple,
+.contact-info,
+.journal-card,
+.journal-detail {
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+.notes-box {
+  margin: 24px 0;
+}
+
+.notes-box > div,
+.contact-item {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.notes-box > div:last-child,
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.notes-box span,
+.contact-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.notes-box p,
+.contact-item p {
+  font-size: 13px;
+}
+
+.about-values-simple {
+  margin-top: 20px;
+}
+
+.value-simple,
+.contact-info {
+  padding: 20px;
+}
+
+.value-simple h3 {
+  margin: 14px 0 8px;
+  font-size: 14px;
+}
+
+.value-simple p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.journal-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.journal-card-top {
+  min-height: 100px;
+  padding: 14px;
+}
+
+.journal-card-content {
+  flex: 1;
+  padding: 18px;
+}
+
+.journal-card-content h2 {
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.journal-card-content h2:hover {
+  color: var(--dark-pink);
+}
+
+.journal-card-content p {
+  margin: 12px 0 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.journal-detail {
+  max-width: 800px;
+  margin: 24px auto;
+}
+
+.journal-detail-top {
+  padding: 20px;
+}
+
+.journal-detail-content {
+  padding: 30px;
+}
+
+.journal-detail-content h1 {
+  margin-top: 24px;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+.journal-detail-intro,
+.journal-body p {
+  margin: 16px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-note h2 {
+  margin: 12px 0;
+  font-size: 28px;
+}
+
+.contact-note p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .navbar,
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 20px;
+  }
+
+  .navbar-links {
+    gap: 2px;
+  }
+
+  .navbar-link {
+    padding: 8px;
+  }
+
+  .home-page {
+    padding: 20px 16px 40px;
+  }
+
+  .hero,
+  .detail-layout,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text,
+  .about-simple,
+  .contact-note {
+    padding: 28px 22px;
+  }
+
+  .hero-image {
+    min-height: 280px;
+  }
+
+  .favorite-grid,
+  .journal-grid,
+  .about-values-simple {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .detail-image {
+    aspect-ratio: 3 / 2;
+  }
+
+  .journal-detail-content {
+    padding: 22px;
+  }
+}
